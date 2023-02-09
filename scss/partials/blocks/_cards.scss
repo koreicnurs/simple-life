@@ -1,0 +1,105 @@
+%cards-var {
+  content: '';
+  display: block;
+  width: 99px;
+  height: 99px;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.cards {
+
+  // .cards__block
+
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -77px;
+    margin-bottom: 71px;
+    z-index: 999;
+    position: relative;
+  }
+
+  // .cards__link-block
+
+  &__link-block {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 59px 0 43px 0;
+  }
+
+  // .cards__link-block--red
+
+  &__link-block--red {
+    background: $bg-color-red;
+  }
+
+  // .cards__title
+
+  &__title {
+    font-size: $fs-title;
+    text-transform: uppercase;
+    margin: 0;
+
+      &::before {
+        @extend %cards-var;
+      }
+
+    @media screen and (max-width: 576px) {
+      font-size: $fs-title-sm;
+    }
+  }
+
+  // .cards__title--chat
+
+  &__title--chat::before  {
+    background: #fff url(../images/chat.png) 50% no-repeat;
+  }
+
+  // .cards__text
+
+  &__text {
+    font-family: $sourceSansPro;
+    max-width: 61%;
+    margin: 0 auto;
+  }
+
+  // .cards__link-block--yellow
+
+  &__link-block--yellow {
+    background: $bg-color-yellow;
+  }
+
+  // .cards__title--pen
+
+  &__title--pen::before {
+    background: #fff url(../images/pen.png) 50% no-repeat;
+  }
+
+  // .cards__link-block--green
+
+  &__link-block--green  {
+    background: $bg-color-green;
+  }
+
+  // .cards__title--crown
+
+  &__title--crown::before  {
+    background: #fff url(../images/crown.png) 50% no-repeat;
+  }
+
+  // .cards__link-block--purple
+
+  &__link-block--purple {
+    background: $bg-color-purple;
+  }
+
+  // .cards__title--user
+
+  &__title--user::before  {
+    background: #fff url(../images/user.png) 50% no-repeat;
+  }
+}
